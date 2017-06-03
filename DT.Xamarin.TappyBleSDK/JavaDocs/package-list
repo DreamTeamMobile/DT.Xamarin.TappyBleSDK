@@ -1,0 +1,15 @@
+com.taptrack.tcmptappy.blescannercompat
+com.taptrack.tcmptappy.blescannercompat.scanners
+com.taptrack.tcmptappy.blescannercompat.scanners.jellybean
+com.taptrack.tcmptappy.blescannercompat.scanners.lollipop
+com.taptrack.tcmptappy.commlink
+com.taptrack.tcmptappy.commlink.ble
+com.taptrack.tcmptappy.commlink.ble.delegate
+com.taptrack.tcmptappy.tappy.ble
+com.taptrack.tcmptappy.tappy.ble.scanner
+com.taptrack.tcmptappy.tappy.ble.service
+com.taptrack.tcmptappy.tappy.ble.simplemanager
+com.taptrack.tcmptappy.tappy.constants
+com.taptrack.tcmptappy.tappyble.scanner
+com.taptrack.tcmptappy.tappyblescanner
+com.taptrack.tcmptappy.tcmpcommlinkservice
