@@ -5,6 +5,7 @@ using Com.Taptrack.Tcmptappy.Commlink.Ble;
 using Android.Runtime;
 using Com.Taptrack.Tcmptappy.Tappy.Ble.Scanner;
 using Com.Taptrack.Tcmptappy.Tappy.Ble;
+using Com.Taptrack.Tcmptappy.Tcmp.Commandfamilies.Basicnfc.Commands;
 
 namespace TestApp
 {
@@ -36,6 +37,11 @@ namespace TestApp
             communicator.Initialize();
             //connect to the tappy
             communicator.Connect();
+
+            //send message
+            ScanNdefCommand command = new ScanNdefCommand();
+            communicator.SendTcmpMessage(command);
+
             // work with tappy
             // disconnect from the tappy
             communicator.Dispose();

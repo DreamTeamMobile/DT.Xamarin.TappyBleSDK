@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DT.Xamarin.TappyBleSDK\DT.Xamarin.TappyBleSDK.csproj">
-      <Project>{B862AF7D-BAE6-48F4-A7D0-D212618C8491}</Project>
+      <Project>{b862af7d-bae6-48f4-a7d0-d212618c8491}</Project>
       <Name>DT.Xamarin.TappyBleSDK</Name>
     </ProjectReference>
   </ItemGroup>
