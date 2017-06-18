@@ -13,7 +13,7 @@ namespace TestApp
     public class MainActivity : Activity
     {
         int count = 1;
-        private ITappyBleDeviceDefinition deviceDefinition;
+        private ITappyBleDeviceDefinition deviceDefinition = new ParcelableTappyBleDeviceDefinition("","",null,null,null);
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,22 +33,22 @@ namespace TestApp
         {
             TappyBleCommunicator communicator =
                 new TappyBleCommunicator(this, deviceDefinition);
-            //prepare to connect
-            communicator.Initialize();
-            //connect to the tappy
-            communicator.Connect();
-
+            ////prepare to connect
+            //communicator.Initialize();
+            ////connect to the tappy
+            //communicator.Connect();
             //send message
+            Toast.MakeText(this, "Thingy", ToastLength.Long);
             ScanNdefCommand command = new ScanNdefCommand();
-            communicator.SendTcmpMessage(command);
+            //communicator.SendTcmpMessage(command);
 
-            // work with tappy
-            // disconnect from the tappy
-            communicator.Dispose();
-            // close the connection
-            // this cancels the connection and removes all listeners
-            communicator.Close();
-            var scanner = TappyBleScanner.Get();
+            //// work with tappy
+            //// disconnect from the tappy
+            //communicator.Dispose();
+            //// close the connection
+            //// this cancels the connection and removes all listeners
+            //communicator.Close();
+            //var scanner = TappyBleScanner.Get();
         }
     }
 }

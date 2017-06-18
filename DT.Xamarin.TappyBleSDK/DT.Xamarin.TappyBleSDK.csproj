@@ -51,7 +51,9 @@
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
-    <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="Transforms\Metadata.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedJar Include="Jars\tappyble-device-release.jar" />
@@ -60,12 +62,20 @@
     <EmbeddedJar Include="Jars\tappy-constants-debug.jar" />
     <EmbeddedJar Include="Jars\commlink-common-release.jar" />
     <EmbeddedJar Include="Jars\blescannercompat-release.jar" />
-    <EmbeddedJar Include="Jars\commlink-ble-release.jar" />
     <EmbeddedJar Include="Jars\tappyble-simplemanager-debug.jar" />
     <EmbeddedJar Include="Jars\message-common-0.9.2.jar" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedJar Include="Jars\commandfamily-basicnfc.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\hdlc-0.9.2.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\commandfamily-common-0.9.2.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\commlink-ble-release.jar" />
   </ItemGroup>
   <PropertyGroup>
     <JavaDocPaths>JavaDocs\</JavaDocPaths>
