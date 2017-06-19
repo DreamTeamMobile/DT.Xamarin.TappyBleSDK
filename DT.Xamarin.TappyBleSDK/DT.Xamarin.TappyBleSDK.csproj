@@ -1,71 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{B862AF7D-BAE6-48F4-A7D0-D212618C8491}</ProjectGuid>
-		<ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-		<OutputType>Library</OutputType>
-		<RootNamespace>DT.Xamarin.TappyBleSDK</RootNamespace>
-		<AssemblyName>DT.Xamarin.TappyBleSDK</AssemblyName>
-		<TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
-		<MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-		<MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-		<AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-		<AndroidClassParser>class-parse</AndroidClassParser>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug</OutputPath>
-		<DefineConstants>DEBUG;</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-		<AndroidLinkMode>None</AndroidLinkMode>
-		<AndroidClassParser>class-parse</AndroidClassParser>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release</OutputPath>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-		<AndroidManagedSymbols>true</AndroidManagedSymbols>
-		<AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="System.Xml" />
-		<Reference Include="System.Core" />
-		<Reference Include="Mono.Android" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Properties\AssemblyInfo.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="Additions\AboutAdditions.txt" />
-		<None Include="Jars\AboutJars.txt" />
-	</ItemGroup>
-	<ItemGroup>
-		<TransformFile Include="Transforms\EnumFields.xml" />
-		<TransformFile Include="Transforms\EnumMethods.xml" />
-		<TransformFile Include="Transforms\Metadata.xml" />
-	</ItemGroup>
-	<ItemGroup>
-	  <EmbeddedJar Include="Jars\tappyble-device-release.jar" />
-	  <EmbeddedJar Include="Jars\tappyble-scanner-release.jar" />
-	  <EmbeddedJar Include="Jars\tappyble-service-release.jar" />
-	  <EmbeddedJar Include="Jars\tappy-constants-debug.jar" />
-	  <EmbeddedJar Include="Jars\commlink-common-release.jar" />
-	  <EmbeddedJar Include="Jars\blescannercompat-release.jar" />
-	  <EmbeddedJar Include="Jars\commlink-ble-release.jar" />
-	  <EmbeddedJar Include="Jars\tappyble-simplemanager-debug.jar" />
-	  <EmbeddedJar Include="Jars\message-common-0.9.2.jar" />
-	</ItemGroup>
-	<PropertyGroup>
-		<JavaDocPaths>JavaDocs\</JavaDocPaths>
-	</PropertyGroup>
-	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B862AF7D-BAE6-48F4-A7D0-D212618C8491}</ProjectGuid>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DT.Xamarin.TappyBleSDK</RootNamespace>
+    <AssemblyName>DT.Xamarin.TappyBleSDK</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="Jars\AboutJars.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\Metadata.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\tappyble-device-release.jar" />
+    <EmbeddedJar Include="Jars\tappyble-scanner-release.jar" />
+    <EmbeddedJar Include="Jars\tappyble-service-release.jar" />
+    <EmbeddedJar Include="Jars\tappy-constants-debug.jar" />
+    <EmbeddedJar Include="Jars\commlink-common-release.jar" />
+    <EmbeddedJar Include="Jars\blescannercompat-release.jar" />
+    <EmbeddedJar Include="Jars\tappyble-simplemanager-debug.jar" />
+    <EmbeddedJar Include="Jars\message-common-0.9.2.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\commandfamily-basicnfc.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\hdlc-0.9.2.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\commandfamily-common-0.9.2.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\commlink-ble-release.jar" />
+  </ItemGroup>
+  <PropertyGroup>
+    <JavaDocPaths>JavaDocs\</JavaDocPaths>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
