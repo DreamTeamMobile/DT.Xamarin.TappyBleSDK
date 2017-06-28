@@ -20,5 +20,5 @@ sudo installer -pkg "downloads/MonoFramework-MDK-${MONO_FRAMEWORK_VERSION}.macos
 echo Download and install Xamarin.Android
 curl -L https://raw.github.com/embarkmobile/android-sdk-installer/version-2/android-sdk-installer | bash /dev/stdin --install=$ANDROID_COMPONENTS --accept=$ANDROID_LICENSES
 source ~/.android-sdk-installer/env
-wget "https://dl.xamarin.com/MonoforAndroid/Mac/xamarin.android-${XAMARIN_ANDROID_VERSION}.pkg"
-sudo installer -pkg "xamarin.android-${XAMARIN_ANDROID_VERSION}.pkg" -target /
+wget -nc -P downloads "https://dl.xamarin.com/MonoforAndroid/Mac/xamarin.android-${XAMARIN_ANDROID_VERSION}.pkg"
+sudo installer -pkg "downloads/xamarin.android-${XAMARIN_ANDROID_VERSION}.pkg" -target /
