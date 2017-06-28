@@ -6,7 +6,7 @@
     <version>0.0.1-alpha1</version>
     <authors>dreamteammobile</authors>
     <owners>dreamteammobile</owners>
-    <projectUrl></projectUrl>
+    <projectUrl>https://github.com/TapTrack/TappyBLE</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This project provides a Xamarin.Android SDK for interfacing with a TapTrack TappyBLE NFC reader.
             https://github.com/TapTrack/TappyBLE
