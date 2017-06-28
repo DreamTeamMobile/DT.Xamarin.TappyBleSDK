@@ -3,8 +3,8 @@ language: csharp
 
 env: 
   global: 
-    - LIB_VERSION=0.0.1
-    - NUGET_VERSION=0.0.1-alpha1
+    - LIB_VERSION=0.0.2
+    - NUGET_VERSION=0.0.2
     
 cache:
   directories:
