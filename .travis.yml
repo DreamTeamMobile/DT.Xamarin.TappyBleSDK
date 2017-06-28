@@ -1,0 +1,26 @@
+os:
+  - osx
+  
+language: 
+  - csharp
+
+env: 
+  global: 
+    - LIB_VERSION=0.0.1
+    - NUGET_VERSION=0.0.1-alpha1
+    
+cache:
+  directories:
+    - downloads
+
+install: 
+  - chmod +x ./build-scripts/travis-before-build.sh
+  - ./build-scripts/travis-before-build.sh
+  - ./build-scripts/changeversion.sh ${LIB_VERSION} ${NUGET_VERSION}
+
+script: 
+  - msbuild DT.Xamarin.TappyBleSDK/DT.Xamarin.TappyBleSDK.csproj /p:Configuration=Release
+
+after_script:
+  - ./build-scripts/pack.sh
+  - ./build-scripts/upload.sh ${NUGET_VERSION} ${NUGET_API_KEY}
